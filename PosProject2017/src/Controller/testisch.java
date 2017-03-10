@@ -2,7 +2,7 @@ package Controller;
 
 public class testisch
 {
-// hallo mein freund d
+// hallo ich heiﬂe daniel
 	public static void main(String[] args){
 		System.out.println("test");
 	}
