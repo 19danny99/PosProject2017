@@ -94,7 +94,7 @@ private JButton ende;
 		
 		if (e.getSource() == info){
 			Object[] options = { "OK"};
-			JOptionPane.showOptionDialog(null, "Programmiert von JaDaHB1", "Information",
+			JOptionPane.showOptionDialog(null, "Programmiert von Matthias Gergelyi und Daniel Kerb.", "Information",
 
 			        JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE,
 
@@ -103,7 +103,7 @@ private JButton ende;
 		
 		if (e.getSource() == einstellung){
 			Object[] options = { "OK"};
-			JOptionPane.showOptionDialog(null, "Hier kÃ¶nnen sie Einstellungen vornehmen", "Information",
+			JOptionPane.showOptionDialog(null, "Hier können Sie Ihre Einstellungen vornehmen.", "Information",
 
 			        JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE,
 
