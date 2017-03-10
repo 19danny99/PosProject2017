@@ -5,7 +5,7 @@ public class testisch
 
 	public testisch()
 	{
-		hi// TODO Auto-generated constructor stub
+		na danie
 	}
 
 }
