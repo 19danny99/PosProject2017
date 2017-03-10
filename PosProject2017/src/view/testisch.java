@@ -3,9 +3,8 @@ package view;
 public class testisch
 {
 
-	public testisch()
-	{
-		na danie
+	public static void main(String[] args){
+		System.out.println("test");
 	}
 
 }
