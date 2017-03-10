@@ -33,9 +33,9 @@ private JButton ende;
 			 
 	
 		
-	Spiel frame = new Spiel("UI");
+	Spiel frame = new Spiel("The Legend of Zolda");
 	frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-	frame.setSize(400,400);
+	frame.setSize(400,430);
 	
 	frame.setLayout(null);
 	frame.setVisible(true);
@@ -72,9 +72,12 @@ private JButton ende;
 	   
 	    
 		
-		JLabel label = new JLabel("Made by JaDaHB1 (V 0.3)");
-		label.setBounds(240,340,150,20);
+		JLabel label = new JLabel("The Legend of Zolda");
+		label.setBounds(240,330,300,20);
+		JLabel label2 = new JLabel("by Matthias Gergelyi and Daniel Kerb");
+		label2.setBounds(150,350,300,20);
 		add(label);
+		add(label2);
 		
 	
 		
@@ -94,7 +97,7 @@ private JButton ende;
 		
 		if (e.getSource() == info){
 			Object[] options = { "OK"};
-			JOptionPane.showOptionDialog(null, "Programmiert von Matthias Gergelyi und Daniel Kerb.", "Information",
+			JOptionPane.showOptionDialog(null, "Programmiert von Daniel Kerb und Matthias Gergelyi.", "Information",
 
 			        JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE,
 
