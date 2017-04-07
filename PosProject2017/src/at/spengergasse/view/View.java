@@ -63,7 +63,7 @@ public class View extends Application
 		
 		
 		
-		Scene scene = new Scene(root1, 600, 400, Color.WHITE);
+		Scene scene = new Scene(root1, 1200, 600, Color.WHITE);
 		
 		Image image = new Image("dildoschwert.png");
 		
