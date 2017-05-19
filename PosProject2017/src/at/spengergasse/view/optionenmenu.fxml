@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TabPane layoutY="-2.0" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Controlls">
+               <content>
+                  <TextArea editable="false" prefHeight="200.0" prefWidth="200.0" text="                                                         CONTROLLS&#10;move left: arrow - left&#10;&#10;move right: arrow - right&#10;&#10;move up: arrow - up&#10;&#10;move down: arrow - down&#10;&#10;hit: s&#10;&#10;item: d" />
+               </content>
+            </Tab>
+          <Tab text="Sound">
+               <content>
+                  <Pane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Slider fx:id="soundbar" layoutX="36.0" layoutY="98.0" prefHeight="116.0" prefWidth="499.0" />
+                     </children>
+                  </Pane>
+               </content>
+            </Tab>
+            <Tab text="Autosave">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ToggleButton layoutX="127.0" layoutY="113.0" mnemonicParsing="false" prefHeight="116.0" prefWidth="297.0" text="Autosave?" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+         <opaqueInsets>
+            <Insets bottom="600.0" left="300.0" right="300.0" top="600.0" />
+         </opaqueInsets>
+      </TabPane>
+   </children>
+   <opaqueInsets>
+      <Insets bottom="600.0" left="300.0" right="300.0" top="600.0" />
+   </opaqueInsets>
+</Pane>
