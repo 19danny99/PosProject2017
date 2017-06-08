@@ -15,6 +15,10 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.Menu;
+import javafx.scene.control.MenuBar;
+import javafx.scene.control.MenuItem;
+import javafx.scene.control.SeparatorMenuItem;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleButton;
 import javafx.scene.image.Image;
@@ -170,11 +174,14 @@ public class View extends Application
 		root1.setStyle(
 				"-fx-background-image: url('background.jpg'); -fx-background-position: center; -fx-background-size: auto; -fx-background-repeat: no-repeat;");
 
-		Image image = new Image("dildoschwert.png");
+		Image image = new Image("mauszeiger.png");
 
 		scene.setCursor(new ImageCursor(image, image.getWidth() / 2, image.getHeight() / 2));
 		
 		primaryStage.setResizable(false);
+		
+		
+		primaryStage.getIcons().add(new Image("gameicon.png"));
 		
 
 		button1.addEventHandler(KeyEvent.KEY_PRESSED, new EventHandler<KeyEvent>()
@@ -327,6 +334,8 @@ public class View extends Application
 					public void handle(ActionEvent e)
 					{
 						
+						 
+						
 						
 						GridPane root4 = new GridPane();
 						root4.setPadding(new Insets(100, 100, 100, 100));
@@ -335,6 +344,19 @@ public class View extends Application
 						root4.setStyle("-fx-background-image: url('background.jpg'); -fx-background-position: center; -fx-background-size: auto; -fx-background-repeat: no-repeat;");
 
 						
+						MenuBar menuBar = new MenuBar();
+					    menuBar.prefWidthProperty().bind(primaryStage.widthProperty());
+					    
+						
+					    Menu gameMenu = new Menu("Game");
+					    MenuItem saveMenuItem = new MenuItem("Save");
+					    MenuItem exitMenuItem = new MenuItem("Exit");
+					    exitMenuItem.setOnAction(actionEvent -> Platform.exit());
+
+					    
+					    gameMenu.getItems().addAll(saveMenuItem, new SeparatorMenuItem(), exitMenuItem);
+					    
+					    menuBar.getMenus().addAll(gameMenu);
 						
 						
 						root4.setPadding(new Insets(10,10,10,10));
@@ -343,8 +365,9 @@ public class View extends Application
 						root4.setHgap(10);
 						root4.setVgap(10);
 						
-						root4.add(new Label("Klasse 1:"),0,0);
-						root4.add(buttonmain, 2, 2);
+						root4.add(menuBar, 0,0);
+						root4.add(new Label("Klasse 1:"),1,0);
+						root4.add(buttonmain, 0, 2);
 						
 					
 						primaryStage.setScene(scene3);
@@ -369,6 +392,22 @@ public class View extends Application
 
 				
 				
+				MenuBar menuBar1 = new MenuBar();
+			    menuBar1.prefWidthProperty().bind(primaryStage.widthProperty());
+			    
+				
+			    Menu gameMenu1 = new Menu("Game");
+			    MenuItem saveMenuItem = new MenuItem("Save");
+			    MenuItem exitMenuItem = new MenuItem("Exit");
+			    exitMenuItem.setOnAction(actionEvent -> Platform.exit());
+
+			    
+			    gameMenu1.getItems().addAll(saveMenuItem, new SeparatorMenuItem(), exitMenuItem);
+			    
+			    menuBar1.getMenus().addAll(gameMenu1);
+				
+				
+				
 				
 				root5.setPadding(new Insets(10,10,10,10));
 
@@ -376,8 +415,9 @@ public class View extends Application
 				root5.setHgap(10);
 				root5.setVgap(10);
 				
-				root5.add(new Label("Klasse 1:"),0,0);
-				root5.add(buttonmain, 2, 2);
+				root5.add(menuBar1, 0,0);
+				root5.add(new Label("Klasse 1:"),1,0);
+				root5.add(buttonmain, 0, 2);
 				
 			
 				primaryStage.setScene(scene3);
@@ -469,11 +509,11 @@ public class View extends Application
 			@Override
 			public void handle(ActionEvent e)
 			{
-				String musicFile = "haveagreattime.mp3";
-
-				Media sound = new Media(new File(musicFile).toURI().toString());
-				MediaPlayer mediaPlayer = new MediaPlayer(sound);
-				mediaPlayer.play();
+//				String musicFile = "haveagreattime.mp3";
+//
+//				Media sound = new Media(new File(musicFile).toURI().toString());
+//				MediaPlayer mediaPlayer = new MediaPlayer(sound);
+//				mediaPlayer.play();
 				
 					
 					Platform.exit();
@@ -489,11 +529,11 @@ public class View extends Application
 			@Override
 			public void handle(ActionEvent e)
 			{
-				String musicFile = "haveagreattime.mp3";
-
-				Media sound = new Media(new File(musicFile).toURI().toString());
-				MediaPlayer mediaPlayer = new MediaPlayer(sound);
-				mediaPlayer.play();
+//				String musicFile = "haveagreattime.mp3";
+//
+//				Media sound = new Media(new File(musicFile).toURI().toString());
+//				MediaPlayer mediaPlayer = new MediaPlayer(sound);
+//				mediaPlayer.play();
 				
 					
 					Platform.exit();
