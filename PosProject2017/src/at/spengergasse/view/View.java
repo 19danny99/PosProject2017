@@ -11,6 +11,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.ImageCursor;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -182,6 +183,13 @@ public class View extends Application
 		
 		
 		primaryStage.getIcons().add(new Image("gameicon.png"));
+		
+		
+//		Image imageg2 = new Image("gegner1.gif");
+//		Image imageg3 = new Image("gegner2.gif");
+//		Image imageg4 = new Image("gegner3.gif");
+//		Image imageg5 = new Image("gegner4.gif");
+//		Image imageg6 = new Image("100prozenthp");
 		
 
 		button1.addEventHandler(KeyEvent.KEY_PRESSED, new EventHandler<KeyEvent>()
@@ -365,9 +373,17 @@ public class View extends Application
 						root4.setHgap(10);
 						root4.setVgap(10);
 						
+						//buttonclick.setGraphic(new ImageView(imageg2));
+						
+						
+						
+						//root4.add(image6,0,0);
 						root4.add(menuBar, 0,0);
 						root4.add(new Label("Klasse 1:"),1,0);
 						root4.add(buttonmain, 0, 2);
+						
+						
+						
 						
 					
 						primaryStage.setScene(scene3);
@@ -420,6 +436,9 @@ public class View extends Application
 				root5.add(buttonmain, 0, 2);
 				
 			
+				//buttonclick.setGraphic(new ImageView(imageg2));
+				
+				
 				primaryStage.setScene(scene3);
 				primaryStage.show();
 				
@@ -433,20 +452,6 @@ public class View extends Application
 			@Override
 			public void handle(ActionEvent e)
 			{
-//				Stage stage1 = new Stage();
-//				Parent root;
-//				try
-//				{
-//					root = FXMLLoader.load(getClass().getResource("optionenmenu.fxml"));
-//					Scene scene = new Scene(root);
-//					stage1.setTitle("Optionen");
-//					stage1.setScene(scene);
-//					stage1.show();
-//
-//				} catch (IOException e1)
-//				{
-//					e1.printStackTrace();
-//				}
 				
 				String musicFile = "fahrstuhl.mp3";
 
@@ -516,7 +521,8 @@ public class View extends Application
 //				mediaPlayer.play();
 				
 					
-					Platform.exit();
+					//Platform.exit();
+				primaryStage.show();
 			
 			}
 		});
