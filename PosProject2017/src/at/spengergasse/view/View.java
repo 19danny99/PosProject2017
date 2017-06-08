@@ -185,12 +185,19 @@ public class View extends Application
 		primaryStage.getIcons().add(new Image("gameicon.png"));
 		
 		
-//		Image imageg2 = new Image("gegner1.gif");
-//		Image imageg3 = new Image("gegner2.gif");
-//		Image imageg4 = new Image("gegner3.gif");
-//		Image imageg5 = new Image("gegner4.gif");
-//		Image imageg6 = new Image("100prozenthp");
-		
+		Image imageg2 = new Image("gegner1.gif");
+		Image imageg3 = new Image("gegner2.gif");
+		Image imageg4 = new Image("gegner3.gif");
+		Image imageg5 = new Image("gegner4.gif");
+		Image imageg6 = new Image("100prozenthp.png");
+		Image imageg7 = new Image("75prozenthp.png");
+		Image imageg8 = new Image("50prozenthp.png");
+		Image imageg9 = new Image("25prozenthp.png");
+		Image imageg10 = new Image("100prozentxp.png");
+		Image imageg11 = new Image("75prozentxp.png");
+		Image imageg12 = new Image("50prozentxp.png");
+		Image imageg13 = new Image("25prozentxp.png");
+		Image imageg14 = new Image("0prozentxp.png");
 
 		button1.addEventHandler(KeyEvent.KEY_PRESSED, new EventHandler<KeyEvent>()
 		{
@@ -351,6 +358,9 @@ public class View extends Application
 						
 						root4.setStyle("-fx-background-image: url('background.jpg'); -fx-background-position: center; -fx-background-size: auto; -fx-background-repeat: no-repeat;");
 
+						Button xpbutton = new Button();
+						Button hpbutton = new Button();
+						
 						
 						MenuBar menuBar = new MenuBar();
 					    menuBar.prefWidthProperty().bind(primaryStage.widthProperty());
@@ -373,14 +383,16 @@ public class View extends Application
 						root4.setHgap(10);
 						root4.setVgap(10);
 						
-						//buttonclick.setGraphic(new ImageView(imageg2));
+						xpbutton.setGraphic(new ImageView(imageg12));
+						hpbutton.setGraphic(new ImageView(imageg9));
 						
-						
-						
-						//root4.add(image6,0,0);
 						root4.add(menuBar, 0,0);
+						root4.add(new Label("HP:"),0,1);
+						root4.add(hpbutton,0,2);
+						root4.add(new Label("XP:"),4,1);
+						root4.add(xpbutton,4,2);
 						root4.add(new Label("Klasse 1:"),1,0);
-						root4.add(buttonmain, 0, 2);
+						root4.add(buttonmain, 0, 3);
 						
 						
 						
@@ -406,7 +418,8 @@ public class View extends Application
 				
 				root5.setStyle("-fx-background-image: url('background.jpg'); -fx-background-position: center; -fx-background-size: auto; -fx-background-repeat: no-repeat;");
 
-				
+				Button xpbutton = new Button();
+				Button hpbutton = new Button();
 				
 				MenuBar menuBar1 = new MenuBar();
 			    menuBar1.prefWidthProperty().bind(primaryStage.widthProperty());
@@ -423,6 +436,8 @@ public class View extends Application
 			    menuBar1.getMenus().addAll(gameMenu1);
 				
 				
+			    xpbutton.setGraphic(new ImageView(imageg12));
+				hpbutton.setGraphic(new ImageView(imageg9));
 				
 				
 				root5.setPadding(new Insets(10,10,10,10));
@@ -432,8 +447,12 @@ public class View extends Application
 				root5.setVgap(10);
 				
 				root5.add(menuBar1, 0,0);
+				root5.add(new Label("HP:"),0,1);
+				root5.add(hpbutton,0,2);
+				root5.add(new Label("XP:"),4,1);
+				root5.add(xpbutton,4,2);
 				root5.add(new Label("Klasse 1:"),1,0);
-				root5.add(buttonmain, 0, 2);
+				root5.add(buttonmain, 0, 3);
 				
 			
 				//buttonclick.setGraphic(new ImageView(imageg2));
