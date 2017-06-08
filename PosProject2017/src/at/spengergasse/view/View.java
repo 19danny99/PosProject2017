@@ -358,9 +358,13 @@ public class View extends Application
 						
 						root4.setStyle("-fx-background-image: url('background.jpg'); -fx-background-position: center; -fx-background-size: auto; -fx-background-repeat: no-repeat;");
 
+						
+						TextField lvl = new TextField("lvl: 1");
 						Button xpbutton = new Button();
 						Button hpbutton = new Button();
 						
+						
+						lvl.setDisable(true);
 						
 						MenuBar menuBar = new MenuBar();
 					    menuBar.prefWidthProperty().bind(primaryStage.widthProperty());
@@ -383,13 +387,15 @@ public class View extends Application
 						root4.setHgap(10);
 						root4.setVgap(10);
 						
+						buttonmain.setGraphic(new ImageView(imageg2));
+						xpbutton.setGraphic(new ImageView(imageg12));
 						xpbutton.setGraphic(new ImageView(imageg12));
 						hpbutton.setGraphic(new ImageView(imageg9));
 						
 						root4.add(menuBar, 0,0);
 						root4.add(new Label("HP:"),0,1);
 						root4.add(hpbutton,0,2);
-						root4.add(new Label("XP:"),4,1);
+						root4.add(lvl,4,1);
 						root4.add(xpbutton,4,2);
 						root4.add(new Label("Klasse 1:"),1,0);
 						root4.add(buttonmain, 0, 3);
@@ -418,8 +424,12 @@ public class View extends Application
 				
 				root5.setStyle("-fx-background-image: url('background.jpg'); -fx-background-position: center; -fx-background-size: auto; -fx-background-repeat: no-repeat;");
 
+				TextField lvl = new TextField("lvl: 1");
+				
 				Button xpbutton = new Button();
 				Button hpbutton = new Button();
+				
+				lvl.setDisable(true);
 				
 				MenuBar menuBar1 = new MenuBar();
 			    menuBar1.prefWidthProperty().bind(primaryStage.widthProperty());
@@ -435,7 +445,7 @@ public class View extends Application
 			    
 			    menuBar1.getMenus().addAll(gameMenu1);
 				
-				
+			    buttonmain.setGraphic(new ImageView(imageg2));
 			    xpbutton.setGraphic(new ImageView(imageg12));
 				hpbutton.setGraphic(new ImageView(imageg9));
 				
@@ -449,7 +459,7 @@ public class View extends Application
 				root5.add(menuBar1, 0,0);
 				root5.add(new Label("HP:"),0,1);
 				root5.add(hpbutton,0,2);
-				root5.add(new Label("XP:"),4,1);
+				root5.add(lvl,4,1);
 				root5.add(xpbutton,4,2);
 				root5.add(new Label("Klasse 1:"),1,0);
 				root5.add(buttonmain, 0, 3);
@@ -491,21 +501,7 @@ public class View extends Application
 				root3.setHgap(10);
 				root3.setVgap(10);
 				
-//				Label label1 = new Label("How to play: Choose your Class then then click on the enemy to kill it!");
-//				HBox hb1 = new HBox();
-//				hb1.getChildren().add(label1);
-//				optionen2.getChildren().add(label1);
-//				hb1.getChildren().add(tbutton4);
-//				optionen2.getChildren().add(tbutton4);
-				
-//				buttonSetclick.getChildren().add(buttonclick);
-//				buttonCenterclick.getChildren().add(buttonSetclick);
-//				StackPane.setAlignment(buttonSetclick, Pos.CENTER);
-//				root3.setCenter(buttonCenterclick);
-//				Image image2 = new Image("enemy.gif");
-//				Image image3 = new Image("zeldalöwe.gif");
-//				buttonclick.setGraphic(new ImageView(image2));
-				// buttonclick.visibleProperty().set(false);
+
 				
 				root3.add(new Label("How to play: Choose your Class and then click on the enemy to kill it!"),0,0);
 				root3.add(tbutton4, 1, 2);
@@ -533,14 +529,10 @@ public class View extends Application
 			@Override
 			public void handle(ActionEvent e)
 			{
-//				String musicFile = "haveagreattime.mp3";
-//
-//				Media sound = new Media(new File(musicFile).toURI().toString());
-//				MediaPlayer mediaPlayer = new MediaPlayer(sound);
-//				mediaPlayer.play();
-				
-					
-					//Platform.exit();
+
+			
+				primaryStage.close();
+				primaryStage.setScene(scene);
 				primaryStage.show();
 			
 			}
